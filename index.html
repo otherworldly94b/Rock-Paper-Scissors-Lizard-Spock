@@ -17,21 +17,25 @@
 
     <div class="game-area">
         <div class="choice-area">
-            <button data-type="rock" class="">
+            <button aria-label="rock" data-type="rock" class="">
                 <img src="assets/images/rock-icon.webp" alt="picture of a rock icon in the rock, paper, scissors, lizard, spock game">
             </button>
-            <button data-type="paper" class="">
+            <button aria-label="paper" data-type="paper" class="">
                 <img src="assets/images/paper-icon.webp" alt="picture of a paper icon in the rock, paper, scissors, lizard, spock game">
             </button>
-            <button data-type="scissors" class="e">
+            <button aria-label="scissors" data-type="scissors" class="e">
                 <img src="assets/images/scissors-icon.webp" alt="picture of a scissors icon in the rock, paper, scissors, lizard, spock game">
             </button>
-            <button data-type="lizard" class="">
+            <button aria-label="lizard" data-type="lizard" class="">
                 <img src="assets/images/lizard-icon.webp" alt="picture of a lizard icon in the rock, paper, scissors, lizard, spock game">
             </button>
-            <button data-type="spock" class="">
+            <button aria-label="spock" data-type="spock" class="">
                 <img src="assets/images/spock-icon.webp" alt="picture of a spock icon in the rock, paper, scissors, lizard, spock game">
             </button>
+        </div>
+        <div class="chosen-area">
+            <span id="player1">Your score</span>
+            <span id="player2">Computer score</span>
         </div>
 
     <script src="assets/js/script.js"></script>
