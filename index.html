@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- font awesome and google fonts -->
-
+    <link href="https://fonts.googleapis.com/css2?family=Coustard&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Rock, Paper, Scissors, Lizard, Spock!</title>
 </head>
 <body>
     <h1 class="header">
-        <img src="assets/images/logo.webp" alt="logo">Rock, Paper, Scissors, Lizard, Spock!
+        <img src="assets/images/rules.png" alt="logo">Rock, Paper, Scissors, Lizard, Spock!
     </h1>
 
     <div class="game-area">
@@ -33,9 +33,14 @@
                 <img src="assets/images/spock-icon.webp" alt="picture of a spock icon in the rock, paper, scissors, lizard, spock game">
             </button>
         </div>
+        <div id="messages"></div> <!--Game example code from code rock paper scissors game-->
         <div class="chosen-area">
-            <span id="player1">Your score</span>
-            <span id="player2">Computer score</span>
+            <h3 class="scores">Your score: <span id="player1">0</span></h3>
+            <img id="player-image" src="assets/images/game.webp" alt="Rock Paper Scissor Lizard Spock image">
+        </div>
+        <div class="chosen-area">
+            <h3 class="scores">Computer score: <span id="computer1">0</span></h3>
+            <img id="computer-image" src="assets/images/game.webp" alt="Rock Paper Scissor Lizard Spock image">
         </div>
 
     <script src="assets/js/script.js"></script>
