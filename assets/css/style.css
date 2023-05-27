@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Coustard&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coustard&family=Play&display=swap');
 
 body {
-    background-color: #5B5B5B;
-    font-family: "Coustard", sans-serif;
-    color: #F1F1F1;
+    background-color: #D4E4FE;
+    font-family: "Play", sans-serif;
+    color: black;
     text-align: center;
 }
 
@@ -12,12 +12,12 @@ body {
     padding-left: 5%;
 }
 
-#section1 {
-
+#section1 ol {
+    font-size: x-large;
 }
 
 .header {
-
+    font-size: xxx-large;
 }
 
 .game-area {
@@ -32,19 +32,32 @@ body {
 
 .choice-area {
     
-    background: white;
 }
 
 .buttons {
-
-    
     border-radius: 50%;
     margin: 2%;
-
+    
 }
 
 #messages {
+    font-size: 50px;
+}
 
+.chosen-area1 {
+    background-color: #FED5D6;
+    width: 45%;
+    float: left;
+    border-radius: 25%;
+    margin-top: 5%;
+}
+
+.chosen-area2 {
+    background-color: #AEBEFE;
+    width: 45%;
+    float: right;
+    border-radius: 25%;
+    margin-top: 5%;
 }
 
 things to do:
