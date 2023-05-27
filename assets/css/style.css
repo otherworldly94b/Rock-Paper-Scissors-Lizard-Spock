@@ -7,6 +7,46 @@ body {
     text-align: center;
 }
 
+.text-left {
+    text-align: left;
+    padding-left: 5%;
+}
+
+#section1 {
+
+}
+
+.header {
+
+}
+
+.game-area {
+
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    text-align: center;
+
+}
+
+.choice-area {
+    
+    background: white;
+}
+
+.buttons {
+
+    
+    border-radius: 50%;
+    margin: 2%;
+
+}
+
+#messages {
+
+}
+
 things to do:
 
 change rules area photo and add the rules
