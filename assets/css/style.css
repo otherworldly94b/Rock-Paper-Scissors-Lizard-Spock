@@ -9,7 +9,7 @@ body {
 
 .text-left {
     text-align: left;
-    padding-left: 5%;
+    padding-left: 7%;
 }
 
 #section1 ol {
@@ -31,17 +31,31 @@ body {
 }
 
 .choice-area {
-    
+    height: auto;
+    width: auto;
 }
 
+.choice-area h3 {
+    font-size: auto;
+}
 .buttons {
     border-radius: 50%;
     margin: 2%;
-    
+    background-color: #1E535F;
+}
+
+.buttons img {
+    height: 120px;
+    width: 120px;
 }
 
 #messages {
-    font-size: 50px;
+    font-size: 75%;
+    width: 75%;
+}
+
+#messages h3 {
+    font-size: 10vw;
 }
 
 .chosen-area1 {
@@ -52,12 +66,23 @@ body {
     margin-top: 5%;
 }
 
+.chosen-area1 img {
+    width: 100%;
+}
+
 .chosen-area2 {
     background-color: #AEBEFE;
     width: 45%;
     float: right;
     border-radius: 25%;
     margin-top: 5%;
+}
+
+.chosen-area2 img {
+    width: 100%;
+}
+.button-label {
+    display: inline-block
 }
 
 things to do:
