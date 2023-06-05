@@ -9,16 +9,33 @@ const playerImage = document.getElementById('player-image');
 const computerImage = document.getElementById('computer-image');
 const messages = document.getElementById('messages');
 
+let playerScore = 0;
+let computerScore = 0;
 
 /**
- * Add event listener to the buttons
+ * Plays a round of the game between the player and the computer and
+ * iterates the scores based on the result and updates them on the webpage.
+ * It also changes the numbers from integers to strings.
  */
-// code based on the Love Maths project
-for (let choice of choices) {
-    choice.addEventListener("click", function() {
-        let playerOne = this.getAttribute('data-type');
-        playGame(playerOption);
-    });
+function playerChoose(player_choice) {
+  let computer_choice = getComputerHand();
+  console.log('computer picks: ', computer_choice);
+  // 0 for draw, 1 for player, 2 for computer
+  let hand_result = evaluateHand(player_choice, computer_choice);
+  console.log('result of game: ', hand_result);
+  if (hand_result === 0) {
+    playerScore ++;
+    computerScore ++;
+  }
+  if (hand_result === 1) {
+    playerScore ++;
+  }
+  if (hand_result === 2) {
+    computerScore ++;
+  }
+  playerOne.innerText = playerScore.toString();
+  computerOne.innerText = computerScore.toString();
+  check_overall_winner();
 }
 
 /**
