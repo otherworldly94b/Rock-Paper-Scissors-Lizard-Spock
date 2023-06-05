@@ -2,23 +2,22 @@
  * Declare constants for DOM elements
  * and possible choices
  */
-// code from the sample video on CI
+// inspired code from the sample video on CI
 
-const buttons = document.getElementsByClassName('buttons');
-const playerOne = documemt.getElementsById('player1');
-const computerOne = documemt.getElementsById('computer1');
-const playerImage = documemt.getElementsById('player-image');
-const computerImage = documemt.getElementsById('computer-image');
-const messages = documemt.getElementsById('messages');
-const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock']
+const playerOne = document.getElementById('player1');
+const computerOne = document.getElementById('computer1');
+const playerImage = document.getElementById('player-image');
+const computerImage = document.getElementById('computer-image');
+const messages = document.getElementById('messages');
+
 
 /**
  * Add event listener to the buttons
  */
 // code based on the Love Maths project
-for (let button of buttons) {
-    button.addEventListener("click", function() {
-        let playerOption = this.getAttribute('data-type');
+for (let choice of choices) {
+    choice.addEventListener("click", function() {
+        let playerOne = this.getAttribute('data-type');
         playGame(playerOption);
     });
 }
@@ -29,15 +28,74 @@ for (let button of buttons) {
  */
 function playGame(playerOption) {
     
-    playerImage.src = `assets/images/${choices[playerOption]}.png`;
+    playerImage.src = `assets/images/${choices[playerOption]}.webp`;
     playerImage.alt = choices[playerOption];
     
-    let computerOption = Math.floor(Math.random() * 5);
+    let computerOption = Math.floor(Math.random() * 5) + 1;
 
-    computerImage.src = `assets/images/${choices[computerOption]}.png`;
+    computerImage.src = `assets/images/${choices[computerOption]}.`;
     computerImage.alt = choices[computerOption];
 
-    let result = checkWinner(choices[computerOption], choices[playerOption]);
+    let result = checkVictor(choices[computerOption], choices[playerOption]);
 
     updateScores(result);
+}
+
+/**
+ * Checks the answer agaist the first element in
+ * the returned calculateCorrectAnswer array
+ */
+function checkVictor(){
+    if(playerChoice == computerChoice){
+        return "It's a Draw!";
+      }
+      else if(computerChoice === "rock"){
+        return (playerChoice === "paper") ? "You Win!" : "You Lose!"
+      }
+      else if(computerChoice === "paper"){
+        return (playerChoice === "scissors") ? "You Win!" : "You Lose!"
+      }
+      else if(computerChoice === "scissors"){
+        return (playerChoice === "rock") ? "You Win!" : "You Lose!"
+      }
+      else if(computerChoice === "lizard"){
+        return (playerChoice === "rock") ? "You Win!" : "You Lose!"
+      }
+      else if(computerChoice === "spock"){
+        return (playerChoice === "lizard") ? "You Win!" : "You Lose!"
+      }
+      else if(computerChoice === "scissors"){
+        return (playerChoice === "spock") ? "You Win!" : "You Lose!"
+      }
+      else if(computerChoice === "lizard"){
+        return (playerChoice === "scissors") ? "You Win!" : "You Lose!"
+      }
+      else if(computerChoice === "paper"){
+        return (playerChoice === "lizard") ? "You Win!" : "You Lose!"
+      }
+      else if(computerChoice === "spock"){
+        return (playerChoice === "paper") ? "You Win!" : "You Lose!"
+      }
+      else if(computerChoice === "rock"){
+        return (playerChoice === "spock") ? "You Win!" : "You Lose!"
+      }
+
+}
+
+/**
+ * Gets the player option and the computer option
+ * directly from the dom, and returns the correct answer.
+ */
+function calculateCorrectAnswer() {
+
+    let option1 = document.getElementsById('player1');
+    let option2 = document.getElementsById('computer1');
+    let operator = document.getElementById('operator');
+
+    if ()
+}
+
+function computerChoice() {
+
+    let 
 }
