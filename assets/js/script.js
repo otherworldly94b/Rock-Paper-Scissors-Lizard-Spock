@@ -1,6 +1,5 @@
 /**
  * Declare constants for DOM elements
- * and possible choices
  */
 // inspired code from the sample video on CI
 
@@ -95,7 +94,14 @@ function calculateCorrectAnswer() {
     if ()
 }
 
-function computerChoice() {
 
-    let 
+/**
+ * Gets a random choice between 
+ * our 5 options and returns it as
+ * the computer's choice.
+ */
+function getComputerHand() {
+  const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+  random_choice =  Math.floor(Math.random() * choices.length);
+  return choices[random_choice];
 }
