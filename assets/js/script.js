@@ -8,6 +8,8 @@ const computerOne = document.getElementById('computer1');
 const playerImage = document.getElementById('player-image');
 const computerImage = document.getElementById('computer-image');
 const messages = document.getElementById('messages');
+const restartBtn  = document.getElementById('restart');
+
 
 let playerScore = 0;
 let computerScore = 0;
@@ -39,80 +41,6 @@ function playerChoose(player_choice) {
 }
 
 /**
- * The main game function. Accepts one parameter, which 
- * is the data-type value of the selected button
- */
-function playGame(playerOption) {
-    
-    playerImage.src = `assets/images/${choices[playerOption]}.webp`;
-    playerImage.alt = choices[playerOption];
-    
-    let computerOption = Math.floor(Math.random() * 5) + 1;
-
-    computerImage.src = `assets/images/${choices[computerOption]}.`;
-    computerImage.alt = choices[computerOption];
-
-    let result = checkVictor(choices[computerOption], choices[playerOption]);
-
-    updateScores(result);
-}
-
-/**
- * Checks the answer agaist the first element in
- * the returned calculateCorrectAnswer array
- */
-function checkVictor(){
-    if(playerChoice == computerChoice){
-        return "It's a Draw!";
-      }
-      else if(computerChoice === "rock"){
-        return (playerChoice === "paper") ? "You Win!" : "You Lose!"
-      }
-      else if(computerChoice === "paper"){
-        return (playerChoice === "scissors") ? "You Win!" : "You Lose!"
-      }
-      else if(computerChoice === "scissors"){
-        return (playerChoice === "rock") ? "You Win!" : "You Lose!"
-      }
-      else if(computerChoice === "lizard"){
-        return (playerChoice === "rock") ? "You Win!" : "You Lose!"
-      }
-      else if(computerChoice === "spock"){
-        return (playerChoice === "lizard") ? "You Win!" : "You Lose!"
-      }
-      else if(computerChoice === "scissors"){
-        return (playerChoice === "spock") ? "You Win!" : "You Lose!"
-      }
-      else if(computerChoice === "lizard"){
-        return (playerChoice === "scissors") ? "You Win!" : "You Lose!"
-      }
-      else if(computerChoice === "paper"){
-        return (playerChoice === "lizard") ? "You Win!" : "You Lose!"
-      }
-      else if(computerChoice === "spock"){
-        return (playerChoice === "paper") ? "You Win!" : "You Lose!"
-      }
-      else if(computerChoice === "rock"){
-        return (playerChoice === "spock") ? "You Win!" : "You Lose!"
-      }
-
-}
-
-/**
- * Gets the player option and the computer option
- * directly from the dom, and returns the correct answer.
- */
-function calculateCorrectAnswer() {
-
-    let option1 = document.getElementsById('player1');
-    let option2 = document.getElementsById('computer1');
-    let operator = document.getElementById('operator');
-
-    if ()
-}
-
-
-/**
  * Gets a random choice between 
  * our 5 options and returns it as
  * the computer's choice.
@@ -122,3 +50,78 @@ function getComputerHand() {
   random_choice =  Math.floor(Math.random() * choices.length);
   return choices[random_choice];
 }
+
+/** 
+ * This compares the player and the computer's hands/choices
+ * and returns a number that corresponds to:
+ * Draw, Win, or Lose (0, 1, 2)
+*/
+
+function evaluateHand(player, computer) {
+  if (player === computer) {
+    return 0;
+  }
+  if (player === 'rock') {
+    if (computer === 'paper' || computer === 'spock') {
+      return 2;
+    }
+  }
+  if (player === 'paper') {
+    if (computer === 'scissors' || computer === 'lizard') {
+      return 2;
+    }
+  }
+  if (player === 'scissors') {
+    if (computer === 'rock' || computer === 'spock') {
+      return 2;
+    }
+  }
+  if (player === 'spock') {
+    if (computer === 'lizard' || computer === 'paper') {
+      return 2;
+    }
+  }
+  if (player === 'lizard') {
+    if (computer === 'scissors' || computer === 'rock') {
+      return 2;
+    }
+  }
+  return 1;
+}
+
+/**
+ * Gets the player option and the computer option
+ * directly from the dom, and returns the correct answer.
+ */
+function check_overall_winner() {
+  if (playerScore === 10 || computerScore === 10) {
+    console.log('END OF GAME!!!');
+    
+    restartBtn.style.visibility = 'visible';
+  }
+}
+
+/**
+ * The main game function. Accepts one parameter, which 
+ * is the data-type value of the selected button
+ */
+function playGame(playerOption) {
+    
+  playerImage.src = `assets/images/${choices[playerOption]}.webp`;
+  playerImage.alt = choices[playerOption];
+  
+  let computerOption = Math.floor(Math.random() * 5) + 1;
+
+  computerImage.src = `assets/images/${choices[computerOption]}.`;
+  computerImage.alt = choices[computerOption];
+
+  let result = checkVictor(choices[computerOption], choices[playerOption]);
+
+  updateScores(result);
+}
+
+
+// what I need to do is disable everything so you cant continue the game 
+// give message on screen as to who won
+// make the restart button visible
+
