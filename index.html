@@ -17,7 +17,7 @@
             <h1 class="header">
                 Rock, Paper, Scissors, Lizard, Spock!
             </h1>
-            <button id="myBtn">Open Game Rules</button>
+            <button id="myBtn" class="glass">Open Game Rules</button>
             <div id="myModal" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content">
@@ -64,8 +64,7 @@
             </button>
             <h3 class="button-label">Spock</h3>
         </div>
-
-        <button id="restart" hidden>Restart Game</button>
+        <button id="restart" class="glass" onclick="location.reload();">Restart Game</button>
     
         <!--Game example code from code rock paper scissors game-->
         <div id="messages"></div>
@@ -77,7 +76,6 @@
             <h3 class="scores">Computer score: <span id="computer1">0</span></h3>
             <img id="computer-image" src="assets/images/game.webp" alt="Rock Paper Scissor Lizard Spock image">
         </div>
-
     </section> 
     <script src="assets/js/script.js"></script>
 </body>
