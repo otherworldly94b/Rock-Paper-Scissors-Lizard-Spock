@@ -26,9 +26,15 @@ function playGame(playerOption) {
   let playerChoice = choices[playerOption];
   let computerChoice = getComputerHand();
   
+  /**
+   * keeping this clg in makes the correct images 
+   * appear on the computer's choice but breaks 
+   * the evaluateHand function
+  */
+  console.log('comp ch: ', computerChoice); 
   playerImage.src = `assets/images/${playerChoice}-icon.webp`;
   playerImage.alt = playerChoice;
-
+  
   computerImage.src = `assets/images/${computerChoice}-icon.webp`;
   computerImage.alt = computerChoice;
 
@@ -45,10 +51,19 @@ let computerScore = 0;
  */
 function playerChoose(player_choice) {
   let computer_choice = getComputerHand();
-  console.log('computer picks: ', computer_choice);
+
+  /**
+   * Keeping the following clg in makes the wrong images 
+   * appear on the computer's choice but allows 
+   * the evaluateHand function to work properly
+   * 
+   * If the clgs I mentioned are commented out
+   * the evaluateHand function works but the images are incorrect
+   */
+
   // 0 for draw, 1 for player, 2 for computer
   let hand_result = evaluateHand(player_choice, computer_choice);
-  console.log('result of game: ', hand_result);
+  console.log('result of game: ', hand_result); //this one
   if (hand_result === 0) {
     playerScore ++;
     computerScore ++;
@@ -173,3 +188,7 @@ window.onclick = function(event) {
 // give message on screen as to who won
 // make the restart button visible
 
+// known issues
+// I wasn't able to get the restart button to appear
+// the images for the computer choice do not match the actual computer choice
+// I still need to do a lot of CSS to make some borrowed elements more unique
