@@ -17,24 +17,32 @@
             <h1 class="header">
                 Rock, Paper, Scissors, Lizard, Spock!
             </h1>
-            <h2 class="text-left">Game Rules</h2>
-            <ol class="text-left">
-                <li>Scissors cuts Paper</li>
-                <li>>Paper covers Rock</li>
-                <li>Rock crushes Lizard</li>
-                <li>Lizard poisons Spock</li>
-                <li>Spock smashes Scissors</li>
-                <li>Scissors decapitates Lizard</li>
-                <li>Lizard eats Paper></li>
-                <li>>Paper disproves Spock</li>
-                <li>Spock vaporizes Rock</li>
-                <li>(and as it always has) Rock crushes Scissors</p></li>
-            </ol>
+            <button id="myBtn">Open Game Rules</button>
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2 class="text-left">Game Rules</h2>
+                    <ol class="text-left">
+                        <li>Scissors cuts Paper</li>
+                        <li>Paper covers Rock</li>
+                        <li>Rock crushes Lizard</li>
+                        <li>Lizard poisons Spock</li>
+                        <li>Spock smashes Scissors</li>
+                        <li>Scissors decapitates Lizard</li>
+                        <li>Lizard eats Paper></li>
+                        <li>Paper disproves Spock</li>
+                        <li>Spock vaporizes Rock</li>
+                        <li>(and as it always has) Rock crushes Scissors</li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </section>
     
     <section class="game-area">
         <div class="choice-area">
+            <h2>Choose your hand: </h2>
             <button aria-label="rock" data-type="rock" class="buttons">
                 <img src="assets/images/rock-icon.webp" alt="picture of a rock icon in the rock, paper, scissors, lizard, spock game">
             </button>
@@ -57,6 +65,7 @@
             <h3 class="button-label">Spock</h3>
         </div>
 
+        <button id="restart" hidden>Restart Game</button>
     
         <!--Game example code from code rock paper scissors game-->
         <div id="messages"></div>

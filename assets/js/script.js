@@ -9,6 +9,7 @@ const playerImage = document.getElementById('player-image');
 const computerImage = document.getElementById('computer-image');
 const messages = document.getElementById('messages');
 const restartBtn  = document.getElementById('restart');
+const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
 
 let playerScore = 0;
@@ -90,8 +91,8 @@ function evaluateHand(player, computer) {
 }
 
 /**
- * Gets the player option and the computer option
- * directly from the dom, and returns the correct answer.
+ * Shows a Restart button that allows for a reset
+ * when either the player or the computer reach 10 points
  */
 function check_overall_winner() {
   if (playerScore === 10 || computerScore === 10) {
@@ -99,25 +100,6 @@ function check_overall_winner() {
     
     restartBtn.style.visibility = 'visible';
   }
-}
-
-/**
- * The main game function. Accepts one parameter, which 
- * is the data-type value of the selected button
- */
-function playGame(playerOption) {
-    
-  playerImage.src = `assets/images/${choices[playerOption]}.webp`;
-  playerImage.alt = choices[playerOption];
-  
-  let computerOption = Math.floor(Math.random() * 5) + 1;
-
-  computerImage.src = `assets/images/${choices[computerOption]}.`;
-  computerImage.alt = choices[computerOption];
-
-  let result = checkVictor(choices[computerOption], choices[playerOption]);
-
-  updateScores(result);
 }
 
 
