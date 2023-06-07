@@ -10,7 +10,13 @@ const computerImage = document.getElementById('computer-image');
 const messages = document.getElementById('messages');
 const restartBtn  = document.getElementById('restart');
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+const buttons = document.getElementsByClassName('buttons');
 
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', function() {
+    playGame(i);
+  });
+}
 
 let playerScore = 0;
 let computerScore = 0;
@@ -101,6 +107,52 @@ function check_overall_winner() {
     restartBtn.style.visibility = 'visible';
   }
 }
+
+// Code from W3S 
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+/**
+ * The main game function. Accepts one parameter, which 
+ * is the data-type value of the selected button
+ */
+function playGame(playerOption) {
+  let playerChoice = choices[playerOption];
+  let computerChoice = getComputerHand();
+  
+  playerImage.src = `assets/images/${playerChoice}-icon.webp`;
+  playerImage.alt = playerChoice;
+
+  computerImage.src = `assets/images/${computerChoice}-icon.webp`;
+  computerImage.alt = computerChoice;
+
+  playerChoose(playerChoice);
+}
+
 
 
 // what I need to do is disable everything so you cant continue the game 
