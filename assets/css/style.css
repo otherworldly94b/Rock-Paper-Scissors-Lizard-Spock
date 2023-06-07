@@ -23,8 +23,8 @@ body {
     position: relative;
     display: inline-block;
     padding: 1rem;
-    background-color: green; /*for compatibility with older browsers*/
-    background-image: linear-gradient(green,lightgreen);
+    background-color: #579494;
+    background-image: linear-gradient(#296069,#1E535F);
     /* text styles */
     text-decoration: none;
     color: #fff;
@@ -88,7 +88,8 @@ body {
 .button-label {
     display: inline-block
 }
-/* code from W3S but this will be modified to fit with my page */
+
+/* code from W3S but this is modified to fit with my page */
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */

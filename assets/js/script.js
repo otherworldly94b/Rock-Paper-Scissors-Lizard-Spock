@@ -31,7 +31,7 @@ function playGame(playerOption) {
    * appear on the computer's choice but breaks 
    * the evaluateHand function
   */
-  console.log('comp ch: ', computerChoice); 
+  // console.log('comp ch: ', computerChoice); 
   playerImage.src = `assets/images/${playerChoice}-icon.webp`;
   playerImage.alt = playerChoice;
   
