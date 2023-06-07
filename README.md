@@ -38,10 +38,25 @@ It is the classing "Rock, Paper, Scissors" game but with the Big Bang Theory add
 
     ![colour-pallet](assets/images/colour-pallet.PNG)
 
-# THE REST OF THE TESTING IS STILL PENDING.
+
+## Lighthouse test pending
+
+## Bugs
+- Unsolved yet
+    - struggled to get the correct image to appear for the computer's choice
+
+# Validator Testing
+- HTML
+    - No error were returned when passing through the official W3C validator
+    ![html-w3c-validator](assets/images/html-w3c-validator.png)
+- CSS
+    - Still pending
+-Javascript
+    - Still pending
 
 
-
+## Deployment
+- The site will be deployed to GitHub pages but that is still pending.
 
 ## Credits
 ---
@@ -50,6 +65,8 @@ It is the classing "Rock, Paper, Scissors" game but with the Big Bang Theory add
 - The biggest similarities should be in social media links, the "times" section and the Gallery page.
 - The signup page should also have similarities but the code for it was written by me in the Love Running project as well.
 - Some CSS code was also inspired from the [Love Running](https://github.com/otherworldly94b/love-running) project.
+- Great deal of help from my mentor in checking and correcting my code.
+- W3S code was also used throughout the project
 
 ### Media
 - All images were taken from the web and links to their origin  will be provided below.
