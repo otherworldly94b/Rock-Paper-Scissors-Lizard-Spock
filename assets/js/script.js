@@ -18,6 +18,23 @@ for (let i = 0; i < buttons.length; i++) {
   });
 }
 
+/**
+ * The main game function. Accepts one parameter, which 
+ * is the data-type value of the selected button
+ */
+function playGame(playerOption) {
+  let playerChoice = choices[playerOption];
+  let computerChoice = getComputerHand();
+  
+  playerImage.src = `assets/images/${playerChoice}-icon.webp`;
+  playerImage.alt = playerChoice;
+
+  computerImage.src = `assets/images/${computerChoice}-icon.webp`;
+  computerImage.alt = computerChoice;
+
+  playerChoose(playerChoice);
+}
+
 let playerScore = 0;
 let computerScore = 0;
 
@@ -104,9 +121,21 @@ function check_overall_winner() {
   if (playerScore === 10 || computerScore === 10) {
     console.log('END OF GAME!!!');
     
-    restartBtn.style.visibility = 'visible';
+    document.getElementById('restart').style.visibility = 'visible';
+
+    // Show the winner message
+    let winnerMessage;
+    if (playerScore > computerScore) {
+      winnerMessage = 'You win!';
+    } else if (playerScore < computerScore) {
+      winnerMessage = 'Computer wins!';
+    } else {
+      winnerMessage = 'It\'s a draw!';
+    }
+    messages.innerHTML = `<h3>${winnerMessage}</h3>`;
   }
 }
+
 
 // Code from W3S 
 // Get the modal
@@ -136,22 +165,7 @@ window.onclick = function(event) {
 }
 
 
-/**
- * The main game function. Accepts one parameter, which 
- * is the data-type value of the selected button
- */
-function playGame(playerOption) {
-  let playerChoice = choices[playerOption];
-  let computerChoice = getComputerHand();
-  
-  playerImage.src = `assets/images/${playerChoice}-icon.webp`;
-  playerImage.alt = playerChoice;
 
-  computerImage.src = `assets/images/${computerChoice}-icon.webp`;
-  computerImage.alt = computerChoice;
-
-  playerChoose(playerChoice);
-}
 
 
 
