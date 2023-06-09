@@ -133,3 +133,16 @@ body {
     text-decoration: none;
     cursor: pointer;
   }
+
+ /* Media query for small screens up to 500px */
+@media screen and (max-width: 500px) {
+    .buttons {
+        display: block;
+        margin: 2% auto;
+    }
+
+    .buttons img {
+        height: 80px;
+        width: 80px;
+    }
+}
