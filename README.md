@@ -2,6 +2,8 @@
 
 It is the classic "Rock, Paper, Scissors" game but with the Big Bang Theory additions, "Lizard and Spock". As the player, you would be able to choose your option and the computer would randomly choose its own hand. The scores are also automatically updated in order to keep track of who is ahead.
 
+![am-i-responsive](assets/images/am-i-responsive.png)
+
 # Features
 
 - Header
@@ -9,7 +11,7 @@ It is the classic "Rock, Paper, Scissors" game but with the Big Bang Theory addi
     - The title should be self-explanatory but I have included the game rules in the header in the form of a modal addition so as to avoid taking space on the page.
     - The button colour is taken from the colour pallete of the hand options.
 
-        ![header](assets/images/header.PNG)
+        ![header](assets/images/header.png)
 
 - The Game Options
     - Include a clear instruction for players to choose their hand from the interactive buttons.
@@ -23,12 +25,12 @@ It is the classic "Rock, Paper, Scissors" game but with the Big Bang Theory addi
     - The overall winner, after 10 games is announced to the user under the options buttons, and the score is updated for either the user or the computer, depending on who won.
     - The results and score are clear to the user, which allows for good keeping track of the who is ahead.
 
-        ![game_results](assets/images/game-results.PNG)
+        ![game_results](assets/images/game-results.png)
 
 - The Footer
     - I decided not to include a footer as I provided the rules in the header and they are accessible at any time by click on the "(i) Game rules" button to open the rules box.
 
-     ![rules](assets/images/rules.PNG)
+     ![rules](assets/images/rules.png)
 
 - The Restart button
     - this button resets the game once the winner of 10 games has been declared and begins everything anew.
@@ -44,10 +46,12 @@ It is the classic "Rock, Paper, Scissors" game but with the Big Bang Theory addi
 - I confirmed that all writing is clear and well in contrast with the background to make it readable and font-size for all wording throughout the page is scalable based on the window size.
 - The colour pallet and fonts chosen are carefully picked to be playful but also easy on the eyes with more pastel tones. The colour pallet for the entire page is also directly derived from the original image that you see before the player and computer choice fields are populated.
 
-    ![colour-pallet](assets/images/colour-pallet.PNG)
+    ![colour-pallet](assets/images/colour-pallet.png)
 
 
-## Lighthouse test pending
+## Lighthouse test
+![mobile-lighthouse](assets/images/mobile-lighthouse.png)
+![desktop-lighthouse](assets/images/desktop-lighthouse.png)
 
 # Bugs
 - Unsolved yet*
