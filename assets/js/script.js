@@ -8,7 +8,6 @@ const computerOne = document.getElementById('computer1');
 const playerImage = document.getElementById('player-image');
 const computerImage = document.getElementById('computer-image');
 const messages = document.getElementById('messages');
-const restartBtn  = document.getElementById('restart');
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 const buttons = document.getElementsByClassName('buttons');
 
@@ -165,30 +164,16 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
   modal.style.display = "block";
-}
+};
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
-
-
-
-
-
-
-// what I need to do is disable everything so you cant continue the game 
-// give message on screen as to who won
-// make the restart button visible
-
-// known issues
-// I wasn't able to get the restart button to appear
-// the images for the computer choice do not match the actual computer choice
-// I still need to do a lot of CSS to make some borrowed elements more unique
+};

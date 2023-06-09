@@ -13,11 +13,13 @@ body {
     font-size: x-large;
 }
 .header {
-    font-size: xxx-large;
+    font-size: 3vw;
 }
 #restart {
   visibility: hidden;
 }
+
+/* code from Simple Steps Code */
 .glass {
   /* background styles */
     position: relative;
@@ -28,7 +30,7 @@ body {
     /* text styles */
     text-decoration: none;
     color: #fff;
-    font-size: 1rem;
+    font-size: 2vw;
     font-family: sans-serif;
     font-weight: 100;
 }
@@ -44,7 +46,7 @@ body {
     width: auto;
 }
 .choice-area h3 {
-    font-size: auto;
+    font-size: 2vw;
 }
 .buttons {
     border-radius: 50%;
@@ -87,6 +89,10 @@ body {
 }
 .button-label {
     display: inline-block
+}
+
+.size {
+    font-size: 2vw;
 }
 
 /* code from W3S but this is modified to fit with my page */

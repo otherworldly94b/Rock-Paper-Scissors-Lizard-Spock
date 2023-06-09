@@ -31,7 +31,7 @@
                         <li>Lizard poisons Spock</li>
                         <li>Spock smashes Scissors</li>
                         <li>Scissors decapitates Lizard</li>
-                        <li>Lizard eats Paper></li>
+                        <li>Lizard eats Paper</li>
                         <li>Paper disproves Spock</li>
                         <li>Spock vaporizes Rock</li>
                         <li>(and as it always has) Rock crushes Scissors</li>
@@ -43,7 +43,7 @@
     
     <section class="game-area">
         <div class="choice-area">
-            <h2>Choose your hand: </h2>
+            <h2 class="size">Choose your hand: </h2>
             <button aria-label="rock" data-type="rock" class="buttons">
                 <img src="assets/images/rock-icon.webp" alt="picture of a rock icon in the rock, paper, scissors, lizard, spock game">
             </button>
@@ -70,13 +70,14 @@
         <!--Game example code from code rock paper scissors game-->
         <div id="messages"></div>
         <div class="chosen-area1">
-            <h3 class="scores">Your score: <span id="player1">0</span></h3>
+            <h3 class="scores, size">Your score: <span id="player1">0</span></h3>
             <img id="player-image" src="assets/images/game.webp" alt="Rock Paper Scissor Lizard Spock image">
         </div>
         <div class="chosen-area2">
-            <h3 class="scores">Computer score: <span id="computer1">0</span></h3>
+            <h3 class="scores, size">Computer score: <span id="computer1">0</span></h3>
             <img id="computer-image" src="assets/images/game.webp" alt="Rock Paper Scissor Lizard Spock image">
         </div>
+        
     </section> 
     <script src="assets/js/script.js"></script>
 </body>
