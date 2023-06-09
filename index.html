@@ -10,6 +10,7 @@
     <title>Rock, Paper, Scissors, Lizard, Spock!</title>
 </head>
 <body>
+    <!-- Section 1 handles the title and the game rules in a modal -->
     <section id="section1">
         <div>
             <h1 class="header">
@@ -38,6 +39,7 @@
         </div>
     </section>
     
+    <!-- Section 2 handles the button choices and the restart button when it is supposed to appear using JS functions -->
     <section class="game-area">
         <div class="choice-area">
             <h2 class="size">Choose your hand: </h2>
@@ -62,9 +64,11 @@
             </button>
             <h3 class="button-label">Spock</h3>
         </div>
+        <!-- Restart button will restart the game and set the scores to 0 -->
         <button id="restart" class="glass" onclick="location.reload();">Restart Game</button>
     
-        <!--Game example code from code rock paper scissors game-->
+        <!--CI Game example code from rock paper scissors game-->
+        <!-- This area handles the scores and images that appear in the chosen area fields -->
         <div id="messages"></div>
         <div class="chosen-area1">
             <h3 class="scores, size">Your score: <span id="player1">0</span></h3>
